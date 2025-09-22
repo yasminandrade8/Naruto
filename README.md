@@ -4,7 +4,7 @@ Projeto - Loja Goku - Isso faz parte das tarefas de DW-I - FATEC Diadema - São 
 ## Sobre
 No projeto foi usado algumas tecnologias como HTML5, CSS, Bootstrap, JSON e JavaScript apenas em recursos Front-End
     
-O objetivo inicial do projeto é criar um layout com foco em deixar o site com uma estrutura de loja virtual que vende produtos relacionados ao anime Naruto
+O objetivo inicial do projeto é criar um layout com foco em uma estrutura de loja virtual que vende produtos relacionados ao anime Naruto
 
 ### Link do Projeto
 https:
