@@ -7,7 +7,4 @@ No projeto foi usado algumas tecnologias como HTML5, CSS, Bootstrap, JSON e Java
 O objetivo inicial do projeto é criar um layout com foco em deixar o site com uma estrutura de loja virtual que vende produtos relacionados ao anime Naruto
 
 ### Link do Projeto
-
-link para o projeto
-
 https:
