@@ -7,27 +7,25 @@ header {
 main {
     background-image: url("img/ImgInício.jpg");
     background-size: cover;
+    background-position: center;
+          
+    position:relative;
+    width: 62%;
+    height: 50px;
+            
+    color: black;
+    text-align: left;
+    padding: 300px;
+    padding-top: 250px;
+    padding-left: 285px;
+           
+        
 
 }
-
-.div_header {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
-
-}
-
-.img_header {
-    height: 100px;
-
-}
-
-
-.bg-texto {
-    font-size: 50px;
-    color:black;
-
+.texto-background {
+    position:absolute;
+    top: 260px;
+    left: 200px;
 
             
             
