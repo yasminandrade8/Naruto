@@ -1,12 +1,24 @@
 header {
     background-color: orange;
-    height: 120px;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 83px;
+   
 
 }
 
-main {
-    background-image: url("img/ImgInício.jpg");
+.img_main {
+    background-image: url("img/imgInício.jpg");
     background-size: cover;
+    position: fixed;
+    top: 83px;
+    left: 0px;
+    right: 0px;
+    
+    
 
 }
 
@@ -19,13 +31,13 @@ main {
 }
 
 .img_header {
-    height: 100px;
+    height: 85px;
 
 }
 
 
 .bg-texto {
-    font-size: 50px;
+    font-size: 35px;
     color:black;
 
 
