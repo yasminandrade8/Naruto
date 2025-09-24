@@ -13,11 +13,11 @@ header {
 .img_main {
     background-image: url("img/imgInício.jpg");
     background-size: cover;
+    
     position: fixed;
     top: 83px;
     left: 0px;
     right: 0px;
-    
     
 
 }
