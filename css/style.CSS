@@ -1,25 +1,33 @@
-.container {
-    background-image: url('ImgInício.jpg');
-    background-size: cover;
-    background-position: center;
-    
-          
-    position:relative;
-    width: 62%;
-    height: 20px;
-            
-    color: black;
-    text-align: left;
-    padding: 200px;
-    padding-top: 0px;
-    padding-left: 300px;
-    padding-right: 3000px;
-           
+header {
+    background-color: orange;
+    height: 120px;
+
 }
-.texto-background {
-    position:absolute;
-    top: 260px;
-    left: 200px;
+
+main {
+    background-image: url("img/ImgInício.jpg");
+    background-size: cover;
+
+}
+
+.div_header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+
+}
+
+.img_header {
+    height: 100px;
+
+}
+
+
+.bg-texto {
+    font-size: 50px;
+    color:black;
+
 
             
             
