@@ -1,6 +1,7 @@
-html, body {
-    overflow-x: hidden; 
-    width: 100%; 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header {
     background-color: rgb(240, 156, 0);
@@ -36,6 +37,7 @@ header {
 
 main {
     margin-top: 75px;
+    flex: 1;
 
 
 }
@@ -57,21 +59,42 @@ main {
 .main_txt {
     font-size: 35px;
     color:black;
-    position: absolute;
+    position:absolute;
     top: 355px;
     left: 300px;
     
-
 }
 
 .main_bk {
-    background-color:rgb(240, 156, 0);
+    background-color: rgb(240, 156, 0);
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 300px;
     
+}
+.main_cards {
+    background-color: rgb(164, 204, 240);
+
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 0px;
+
+    border: 2px rgb(255, 255, 255);
+
+    padding-top: 120px;
+    padding-bottom: 1300px;
+    padding-left: 240px;
+    padding-right: 240px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.footer_div {
+    background-color: rgb(192, 128, 32) ;
 }
 
