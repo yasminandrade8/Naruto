@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden; 
+  width: 100%; 
+}
 header {
     background-color: orange;
     
@@ -6,45 +10,56 @@ header {
     left: 0px;
     right: 0px;
     height: 83px;
-   
-
 }
 
-main{
-    margin-top: 83px;
-
-
-}
-
-.img_main {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    width: 1920px;
-    height: 750px;
-    object-fit: cover;
- 
-}
-
-.div_header {
+.header_div {
     display: flex;
     flex-direction: row;
     gap: 20px;
 
 
 }
-
-.img_header {
+.header_img {
     height: 85px;
 
 }
+.header_txt {
+    font-size: 35px;
+    color:black;
+
+       
+}
+
+main{
+    margin-top: 75px;
 
 
-.bg-texto {
+}
+
+.main_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 75px;
+}
+
+.main_img {
+  position: fixed; 
+  left: 0px;  
+  right: 0px; 
+  height: 700px;
+  
+  width: 100%;
+
+
+}
+
+.main_txt {
     font-size: 35px;
     color:black;
 
 
-            
-            
+
+
 }
+
