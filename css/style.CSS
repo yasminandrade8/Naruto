@@ -1,9 +1,9 @@
 html, body {
-  overflow-x: hidden; 
-  width: 100%; 
+    overflow-x: hidden; 
+    width: 100%; 
 }
 header {
-    background-color: orange;
+    background-color: rgb(240, 156, 0);
     
     position: fixed;
     top: 0px;
@@ -27,39 +27,51 @@ header {
     font-size: 35px;
     color:black;
 
+    position: absolute;
+    left: 100px;
+    top: 25px;
+
        
 }
 
-main{
+main {
     margin-top: 75px;
 
 
 }
 
 .main_div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 75px;
+    background-image: url(../img/ImgInício.png);
+    padding-bottom: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    position: static;
+    right: 0px;
+    left: 0px;
+    
 }
 
-.main_img {
-  position: fixed; 
-  left: 0px;  
-  right: 0px; 
-  height: 700px;
-  
-  width: 100%;
-
-
-}
 
 .main_txt {
     font-size: 35px;
     color:black;
+    position: absolute;
+    top: 355px;
+    left: 300px;
+    
 
+}
 
+.main_bk {
+    background-color:rgb(240, 156, 0);
+    
+}
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
