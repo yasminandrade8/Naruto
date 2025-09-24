@@ -31,6 +31,23 @@ header {
     left: 100px;
     top: 25px;      
 }
+.header_menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    position: absolute;
+    right: 100px;
+    top: 30px;  
+}
+.btn_home, .btn_sobre, .btn_login, .btn_carrinho {
+    background-color: rgb(240, 156, 0);
+    border: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;    
+}
+
 main {
     margin-top: 75px;
     flex: 1;
