@@ -1,2 +1,36 @@
+header {
+    background-color: orange;
+    height: 120px;
+
+}
+
+main {
+    background-image: url("img/ImgInício.jpg");
+    background-size: cover;
+
+}
+
+.div_header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+
+}
+
+.img_header {
+    height: 100px;
+
+}
+
+
+.bg-texto {
+    font-size: 50px;
+    color:black;
+
+
+            
+            
+}
 
 
