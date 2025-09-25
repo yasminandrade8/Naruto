@@ -25,6 +25,7 @@ header {
 }
 .header_txt {
     font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
     color:black;
 
     position: absolute;
