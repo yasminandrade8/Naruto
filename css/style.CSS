@@ -101,3 +101,75 @@ main {
     background-color: rgb(192, 128, 32) ;
 }
 
+.maincar{
+
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    width: 210px;
+    height: 290px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card>img {
+
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nome_produto{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    padding: 2px;
+    padding-top: 8px;
+    font-weight: 600;
+    padding-bottom: 1px;
+    
+    
+}
+
+.price{
+    color: rgb(27, 131, 9);
+    font-size: 14px;
+    
+}
+
+
+.btn_comprar{
+
+    height: 29px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 177, 33);
+    border-radius: 7px;
+    margin-right: 25px;
+    margin-left: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: -5px;
+    transition: 0.3s background;
+    
+
+}
+
+.btn_comprar:hover{
+     transition: 0.5s background;
+     background-color: rgb(221, 153, 25);
+
+}
+
