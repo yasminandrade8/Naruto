@@ -3,24 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <title>Login - Loja Naruto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-     <header>
-        <div     class="header_div">
-            <img class="header_img" src="/img/narutoicon.jpg" alt="">
+    <header>
+        <div class="header_div">
+            <img class="header_img" src="../img/narutoicon.jpg" alt="Icon">
             <p class="header_txt">Loja Naruto</p>   
         </div>             
-        
         <div class="header_menu">
             <a href="../index.html"><button class="btn_home">Home</button></a>
             <a href="sobre.html"><button class="btn_sobre">Sobre</button></a>
             <a href="login.html"><button class="btn_login">Login</button></a>
             <a href="carrinho.html"><button class="btn_carrinho"><i class="fas fa-shopping-cart"></i></button></a>
         </div>
-    </header>  
-   
+    </header>
+
+    <main>
+        <div class="main_div login_background">
+            <div class="login_overlay">
+                <h1>Efetue seu login e se torne o melhor ninja!!</h1>
+               
+                
+                <form id="loginForm" class="login_form">
+                    <input type="text" id="usuario" placeholder="Nome de usuário" class="login_input" required>
+                    <input type="password" id="senha" placeholder="Senha" class="login_input" required>
+                    <button type="submit" class="btn_comprar">Entrar</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const usuario = document.getElementById('usuario').value;
+            const senha = document.getElementById('senha').value;
+
+            if (usuario === "naruto" && senha === "hokage") {
+                alert("Login bem-sucedido! 🍥 Bem-vindo ao mercado ninja!");
+                window.location.href = "../index.html";
+            } else {
+                alert("Usuário ou senha incorretos! ⚡");
+            }
+        });
+    </script>
 </body>
 </html>
