@@ -254,6 +254,11 @@ main {
     border-top-right-radius: 20px;
 }
 
+.produtos_card-img {
+  margin-bottom: 1.6rem;
+  width: 18rem;
+}
+
 .nome_produto {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
