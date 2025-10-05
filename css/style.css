@@ -33,6 +33,13 @@
     backdrop-filter: blur(6px);
     transform: translateY(300px); 
 }
+body {
+    min-height: 100vh;
+    background-image: url(../img/wall(1).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
 
 .main_txt {
     font-size: 2.5rem;
