@@ -10,4 +10,4 @@ No projeto foi usado algumas tecnologias como HTML5, CSS, Bootstrap, JSON e Java
 
 
 ### Link do Projeto
-https:
+https://yasminandrade8.github.io/Naruto/
