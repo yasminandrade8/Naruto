@@ -5,7 +5,8 @@ Projeto - Loja Naruto- Isso faz parte das tarefas de DW-I - FATEC Diadema - São
 No projeto foi usado algumas tecnologias como HTML5, CSS, Bootstrap, JSON e JavaScript apenas em recursos Front-End. O objetivo inicial do projeto é criar um layout com foco em uma estrutura de loja virtual que vende produtos relacionados ao anime Naruto
 
 ### Tela Incial
-<img width="1920" height="916" alt="{A077AA59-9033-4B75-B878-04321301BCD0}" src="https://github.com/user-attachments/assets/9045258e-ba3a-45c9-a5f1-c0429eebbd50" />
+<img width="1920" height="911" alt="{50D394E4-843F-42E1-9ED9-CAA02A78D503}" src="https://github.com/user-attachments/assets/bfd00175-4d94-4c35-8c02-dff940f0aa97" />
+
 
 
 ### Link do Projeto
