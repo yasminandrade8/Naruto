@@ -1,4 +1,4 @@
-# Projeto web -  Bem vindo a loja Virtual do Naruto
+# Projeto web -  Bem vindo a Loja Virtual do Naruto
 Site de desenvolvimento de DW-1, Fatec Luigi Papaiz de Diadema - v1, 2025 | Prof.Dr.Bruno Zolotareff dos Santos 
 
 Desenvolvido por: 
