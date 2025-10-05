@@ -56,6 +56,13 @@ body {
     border-radius: 25px;
 }
 
+.sbr_background {
+    background-image: url(../img/imgsobre.jpg);
+    background-size: cover;
+    height: 890px;
+    
+}
+
 .txt_sbr{
     margin: 15px;
 }
