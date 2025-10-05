@@ -35,10 +35,13 @@
 }
 body {
     min-height: 100vh;
-    background-image: url(../img/wall(1).jpg);
+    background-image: url(../img/wall.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
+}
+.sbr_div{
+    
 }
 
 .main_txt {
