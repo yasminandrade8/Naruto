@@ -11,16 +11,13 @@ function salvarCarrinho(carrinho) {
 
 function adicionarAoCarrinho(id, nome, preco, imagem) {
     let carrinho = getCarrinho();
-    let precoNumerico = parseFloat(preco); 
+    let precoNumerico = parseFloat(preco);
 
-    
     const itemExistente = carrinho.find(item => item.id === id);
 
     if (itemExistente) {
-        
         itemExistente.quantidade++;
     } else {
-
         carrinho.push({
             id: id,
             nome: nome,
@@ -31,8 +28,13 @@ function adicionarAoCarrinho(id, nome, preco, imagem) {
     }
 
     salvarCarrinho(carrinho);
-    alert(`${nome} adicionado ao carrinho! Quantidade atual: ${itemExistente ? itemExistente.quantidade : 1}`);
+
+    // Mostra aviso visual de adição
+    mostrarToast(`${nome} foi adicionado ao carrinho!`, 'success');
+
+    
 }
+
 
 
 function atualizarTotal(carrinho) {
