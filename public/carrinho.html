@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>Pagina para compra</title>
 </head>
 <body>
-     <header>
+
+    <header>
         <div class="header_div">
-            <img class="header_img" src="../img/narutoicon.jpg" alt="">
+            <img class="header_img" src="../img/narutoicon.jpg" alt="Icon">
             <p class="header_txt">Loja Naruto</p>   
         </div>             
         
@@ -21,13 +21,39 @@
             <a href="login.html"><button class="btn_login">Login</button></a>
             <a href="carrinho.html"><button class="btn_carrinho"><i class="fas fa-shopping-cart"></i></button></a>
         </div>
-    </header> 
-    
+    </header>    
+
+    <main class="carrinho-main">
+        <h1 class="main_txt" style="text-align: center; margin-bottom: 30px;">Seu Carrinho de Compras</h1>
+        
+        <div id="lista-carrinho" class="carrinho-container">
+            </div>
+
+        <div class="carrinho-resumo">
+            <h2>Resumo do Pedido</h2>
+            <div class="resumo-item">
+                <span>Subtotal:</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+            <div class="resumo-item total">
+                <span>Total a Pagar:</span>
+                <span id="total-geral">R$ 0,00</span>
+            </div>
+            <button class="btn_finalizar_compra" onclick="alert('Funcionalidade de Checkout ainda não implementada!')">Finalizar Compra</button>
+            <button class="btn_limpar_carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+    </main>
+
     <footer>
         <div class="footer_div">
             <p class="footer_txt">©Loja Naruto</p>
         </div>   
     </footer>
     
+    <script src="../js/carrinho.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', carregarCarrinho);
+    </script>
 </body>
 </html>
