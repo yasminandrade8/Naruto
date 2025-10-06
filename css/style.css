@@ -302,3 +302,135 @@ main {
     background-color: rgb(221, 153, 25);
 }
 
+/* --- ESTILOS PARA A PÁGINA DO CARRINHO (carrinho.html) --- */
+
+.carrinho-main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.carrinho-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-item:last-child {
+    border-bottom: none;
+}
+
+.carrinho-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.carrinho-detalhes {
+    flex-grow: 1;
+}
+
+.carrinho-detalhes h4 {
+    margin: 0;
+    color: #333;
+}
+
+.carrinho-detalhes p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.carrinho-quantidade input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.carrinho-subtotal {
+    min-width: 120px;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+.btn_remover {
+    background: none;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+.carrinho-resumo {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: right;
+}
+
+.carrinho-resumo h2 {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #333;
+}
+
+.resumo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.resumo-item.total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #000;
+}
+
+.btn_finalizar_compra, .btn_limpar_carrinho {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn_finalizar_compra {
+    background-color: #f0ad4e; /* Cor Naruto */
+    color: white;
+    margin-left: 10px;
+}
+
+.btn_finalizar_compra:hover {
+    background-color: #e69c3a;
+}
+
+.btn_limpar_carrinho {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn_limpar_carrinho:hover {
+    background-color: #bbb;
+}
