@@ -29,7 +29,6 @@ function adicionarAoCarrinho(id, nome, preco, imagem) {
 
     salvarCarrinho(carrinho);
 
-    // Mostra aviso visual de adição
     mostrarToast(`${nome} foi adicionado ao carrinho!`, 'success');
 
     
