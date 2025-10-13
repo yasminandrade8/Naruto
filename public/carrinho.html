@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho</title>
-  <link rel="stylesheet" href="../css/style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,20 +12,27 @@
       padding: 0;
     }
 
-    header, footer {
-      background-color: #ff6600;
+    header {
+      background-color: #ff9800;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 0px;
     }
 
     main {
-      max-width: 800px;
+      max-width: 500px;
       margin: 20px auto;
       background: white;
-      padding: 20px;
+     
       border-radius: 10px;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    .main_div {
+      height: 520px;
+    }
+
+    h1 {
+      padding-bottom: 20px;
     }
 
     h2 { text-align: center; }
@@ -60,7 +66,7 @@
     }
 
     .btn-remover {
-      background-color: red;
+      background-color: #ff9800;
       color: white;
       border: none;
       border-radius: 6px;
@@ -114,15 +120,29 @@
     .btn-finalizar:hover {
       background-color: #218838;
     }
+
+    .footer_div {
+      background-color: rgb(192, 128, 32) ;
+      height: 50px;
+    }
+
+    .footer_txt {
+      font-size: 30px;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding-top: 10px;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Carrinho</h1>
+    <br>
+    <h1 class="h1">Carrinho</h1>
   </header>
 
-  <main>
+  <main class="main_div">
     <h2>Seus Itens</h2>
     <div id="lista-carrinho"></div>
 
@@ -157,97 +177,100 @@
     </div>
 
     <button class="btn-finalizar" id="finalizar">Finalizar Compra</button>
-  </main>
+  
 
-  <footer>
-    <p>© Loja Naruto</p>
-  </footer>
+  
+    <script>
+      // Função para carregar o carrinho
+      function carregarCarrinho() {
+        const lista = document.getElementById("lista-carrinho");
+        const totalEl = document.getElementById("total");
+        lista.innerHTML = "";
 
-  <script>
-    // Função para carregar o carrinho
-    function carregarCarrinho() {
-      const lista = document.getElementById("lista-carrinho");
-      const totalEl = document.getElementById("total");
-      lista.innerHTML = "";
-
-      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-      let total = 0;
-
-      if (carrinho.length === 0) {
-        lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
-        totalEl.textContent = "0,00";
-        return;
-      }
-
-      carrinho.forEach((produto, index) => {
-        const precoNum = parseFloat(produto.preco.replace("R$", "").replace(",", "."));
-        total += precoNum;
-
-        const div = document.createElement("div");
-        div.classList.add("produto");
-        div.innerHTML = `
-          <img src="${produto.img}" alt="${produto.nome}">
-          <div class="produto-info">
-            <p class="produto-nome">${produto.nome}</p>
-            <p class="produto-preco">${produto.preco}</p>
-          </div>
-          <button class="btn-remover" data-index="${index}">Remover</button>
-        `;
-        lista.appendChild(div);
-      });
-
-      totalEl.textContent = total.toFixed(2).replace(".", ",");
-    }
-
-    document.addEventListener("click", (e) => {
-      if (e.target.classList.contains("btn-remover")) {
         let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-        const index = e.target.getAttribute("data-index");
-        carrinho.splice(index, 1);
-        localStorage.setItem("carrinho", JSON.stringify(carrinho));
-        carregarCarrinho();
-      }
-    });
+        let total = 0;
 
-    const pagamentoRadios = document.querySelectorAll('input[name="pagamento"]');
-    const detalhesCartao = document.getElementById("cartao-detalhes");
-
-    pagamentoRadios.forEach(radio => {
-      radio.addEventListener("change", () => {
-        if (radio.value === "cartao") {
-          detalhesCartao.style.display = "block";
-        } else {
-          detalhesCartao.style.display = "none";
-        }
-      });
-    });
-
-    document.getElementById("finalizar").addEventListener("click", () => {
-      const metodo = document.querySelector('input[name="pagamento"]:checked');
-      if (!metodo) {
-        alert("Selecione uma forma de pagamento!");
-        return;
-      }
-
-      if (metodo.value === "cartao") {
-        const numero = document.getElementById("num-cartao").value;
-        const nome = document.getElementById("nome-cartao").value;
-        const validade = document.getElementById("validade").value;
-        const cvv = document.getElementById("cvv").value;
-
-        if (!numero || !nome || !validade || !cvv) {
-          alert("Preencha todos os dados do cartão!");
+        if (carrinho.length === 0) {
+          lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
+          totalEl.textContent = "0,00";
           return;
         }
+
+        carrinho.forEach((produto, index) => {
+          const precoNum = parseFloat(produto.preco.replace("R$", "").replace(",", "."));
+          total += precoNum;
+
+          const div = document.createElement("div");
+          div.classList.add("produto");
+          div.innerHTML = `
+            <img src="${produto.img}" alt="${produto.nome}">
+            <div class="produto-info">
+              <p class="produto-nome">${produto.nome}</p>
+              <p class="produto-preco">${produto.preco}</p>
+            </div>
+            <button class="btn-remover" data-index="${index}">Remover</button>
+          `;
+          lista.appendChild(div);
+        });
+
+        totalEl.textContent = total.toFixed(2).replace(".", ",");
       }
 
-      alert("Compra finalizada com sucesso via " + metodo.value.toUpperCase() + "!");
-      localStorage.removeItem("carrinho");
-      window.location.href = "../index.html";
-    });
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-remover")) {
+          let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+          const index = e.target.getAttribute("data-index");
+          carrinho.splice(index, 1);
+          localStorage.setItem("carrinho", JSON.stringify(carrinho));
+          carregarCarrinho();
+        }
+      });
 
-    carregarCarrinho();
-  </script>
+      const pagamentoRadios = document.querySelectorAll('input[name="pagamento"]');
+      const detalhesCartao = document.getElementById("cartao-detalhes");
+
+      pagamentoRadios.forEach(radio => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "cartao") {
+            detalhesCartao.style.display = "block";
+          } else {
+            detalhesCartao.style.display = "none";
+          }
+        });
+      });
+
+      document.getElementById("finalizar").addEventListener("click", () => {
+        const metodo = document.querySelector('input[name="pagamento"]:checked');
+        if (!metodo) {
+          alert("Selecione uma forma de pagamento!");
+          return;
+        }
+
+        if (metodo.value === "cartao") {
+          const numero = document.getElementById("num-cartao").value;
+          const nome = document.getElementById("nome-cartao").value;
+          const validade = document.getElementById("validade").value;
+          const cvv = document.getElementById("cvv").value;
+
+          if (!numero || !nome || !validade || !cvv) {
+            alert("Preencha todos os dados do cartão!");
+            return;
+          }
+        }
+
+        alert("Compra finalizada com sucesso via " + metodo.value.toUpperCase() + "!");
+        localStorage.removeItem("carrinho");
+        window.location.href = "../index.html";
+      });
+
+      carregarCarrinho();
+    </script>
+  </main>
+
+  <footer class="footer_div">
+    <p class="footer_txt">© Loja Naruto</p>
+  </footer>
+
 
 </body>
 </html>
