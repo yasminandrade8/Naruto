@@ -22,7 +22,7 @@
             <a href="index.html"><button class="btn_home">Home</button></a>
             <a href="public/sobre.html"><button class="btn_sobre">Sobre</button></a>
             <a href="public/login.html"><button class="btn_login">Login</button></a>
-            <button class="btn_carrinho"><i class="fas fa-shopping-cart"></i></button>
+            <a href="public/carrinho.html"><button class="btn_carrinho"><i class="fas fa-shopping-cart"></i></button></a>
         </div>
     </header>    
 
@@ -41,17 +41,30 @@
                     <div class="card card1">
                         <img class="produto_card-img" src="img/Naruto.jpeg" alt="naruto">
                         <h6><span class="nome_produto">Funko Naruto</span><br><span class="price">R$ 120,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Naruto"
+                            data-preco="120.90"
+                            data-img="img/Naruto.jpeg"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
+
                     </div>
                     <div class="card card2">
                         <img class="produto_card-img" src="img/Sasuke.webp" alt="sasuke">
                         <h6><span class="nome_produto">Funko Sasuke</span><br><span class="price">R$ 120,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Sasuke"
+                            data-preco="120.90"
+                            data-img="img/Sasuke.webp"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                     <div class="card card3">
                         <img class="produto_card-img" src="img/Sakura.png" alt="sakura">
                         <h6><span class="nome_produto">Funko Sakura</span><br><span class="price">R$ 120,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Sakura"
+                            data-preco="120.90"
+                            data-img="img/Sakura.png"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
 
                 </div>
@@ -61,17 +74,29 @@
                     <div class = "card card4">
                         <img class="produto_card-img" src="img/Kakashi.png" alt = "kakashi">
                         <h6><span class="nome_produto">Funko Kakashi</span><br><span class="price">R$ 129,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Kakashi"
+                            data-preco="129.90"
+                            data-img="img/Kakashi.png"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                     <div class="card card5">
                         <img class="produto_card-img" src="img/Itachi.png" alt="Itachi">
                         <h6><span class="nome_produto">Funko Itachi</span><br><span class="price">R$ 134,99</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Itachi"
+                            data-preco="134,99"
+                            data-img="img/Itachi.png"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                     <div class = "card card6">
                         <img class="produto_card-img" src="img/Naruto Transformação.jpeg" alt="Naruto (Sage mode)">
                         <h6><span class="nome_produto">Funko Naruto(Sage mode)</span><br><span class="price">R$ 149,99</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Naruto(Sage mode)"
+                            data-preco="149,99"
+                            data-img="img/Naruto Transformação.jpeg"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
 
                 </div>
@@ -81,17 +106,29 @@
                     <div class="card card7">
                         <img class="produto_card-img" src="img/Gaara.png" alt="Gaara">
                         <h6><span class="nome_produto">Funko Gaara</span><br><span class="price">R$ 115,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Gaara"
+                            data-preco="115,90"
+                            data-img="img/Gaara.png"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                     <div class="card card8">
                         <img class="produto_card-img" src="img/Rock Lee.png" alt="Rock Lee">
                         <h6><span class="nome_produto">Funko Rock Lee</span><br><span class="price">R$ 115,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Rock Lee"
+                            data-preco="115,90"
+                            data-img="img/Rock Lee.png"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                     <div class="card card9">
                         <img class="produto_card-img" src="img/SasukeV2.webp" alt="Sasuke (Rinnegan)">
                         <h6><span class="nome_produto">Funko Sasuke(Rinnegan)</span><br><span class="price">R$ 129,90</span></h6><br>
-                        <button class="btn_comprar">Comprar</button>
+                        <button class="btn_comprar"
+                            data-nome="Funko Sasuke(Rinnegan)"
+                            data-preco="129.90"
+                            data-img="img/SasukeV2.webp"
+                            onclick="adicionarAoCarrinho(this)">Comprar</button>
                     </div>
                 </div>
             </div> 
@@ -101,7 +138,9 @@
     <footer>
         <div class="footer_div">
             <p class="footer_txt">©Loja Naruto</p>
-        </div>   
+        </div> 
+        <script src="js/carrinho.js"></script>
+
     </footer>
     
 </body>
