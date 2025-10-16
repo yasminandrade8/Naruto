@@ -19,7 +19,7 @@
     padding: 15px;
     border-radius: 15px;
     backdrop-filter: blur(6px);
-    transform: translateY(50px); 
+    transform: translateY(50px);
 }
 
 
@@ -31,8 +31,9 @@
     padding: 50px;
     border-radius: 15px;
     backdrop-filter: blur(6px);
-    transform: translateY(300px); 
+    transform: translateY(300px);
 }
+
 body {
     min-height: 100vh;
     background-image: url(../img/wall.jpg);
@@ -41,9 +42,9 @@ body {
     background-color: black;
 }
 
-.sbr_div{
+.sbr_div {
     font-size: 42px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: solid black;
     background-color: rgb(250, 151, 80);
     padding-top: 5px;
@@ -62,10 +63,10 @@ body {
     width: 100%;
     height: 890px;
     padding-top: 1px;
-    
+
 }
 
-.txt_sbr{
+.txt_sbr {
     margin: 15px;
 }
 
@@ -119,34 +120,39 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 header {
     background-color: rgb(240, 156, 0);
-    
+
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     height: 83px;
-    
+
     z-index: 100;
 }
+
 .header_div {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
+
 .header_img {
     height: 85px;
 }
+
 .header_txt {
     font-size: 35px;
-    font-family:Arial, Helvetica, sans-serif;
-    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 
     position: absolute;
     left: 100px;
-    top: 25px;      
+    top: 25px;
 }
+
 .header_menu {
     display: flex;
     flex-direction: row;
@@ -154,34 +160,40 @@ header {
 
     position: absolute;
     right: 100px;
-    top: 30px;  
+    top: 30px;
 }
-.btn_home, .btn_sobre, .btn_login, .btn_carrinho {
+
+.btn_home,
+.btn_sobre,
+.btn_login,
+.btn_carrinho {
     background-color: rgb(240, 156, 0);
     border: none;
     font-size: 20px;
     color: black;
-    cursor: pointer;    
+    cursor: pointer;
 }
+
 main {
     margin-top: 75px;
     flex: 1;
 }
+
 .main_div {
     background-image: url(../img/ImgInício.png);
     padding-bottom: 800px;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     position: relative;
     right: 0px;
-    left: 0px;  
+    left: 0px;
 }
 
 .main_txt {
     font-size: 35px;
-    font-family:Arial, Helvetica, sans-serif;
-    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 
     position: absolute;
     top: 400px;
@@ -199,7 +211,7 @@ main {
 .div_separacao {
     background-color: #ff9800;
     font-size: 33px;
-    
+
 }
 
 .tc {
@@ -207,7 +219,7 @@ main {
 }
 
 .main_cards {
-    
+
     display: flex;
     flex-direction: column;
 
@@ -223,13 +235,13 @@ main {
 }
 
 .footer_div {
-    background-color: rgb(192, 128, 32) ;
+    background-color: rgb(192, 128, 32);
     height: 50px;
 }
 
 .footer_txt {
     font-size: 30px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding-top: 10px;
 }
@@ -257,8 +269,8 @@ main {
 }
 
 .produtos_card-img {
-  margin-bottom: 1.6rem;
-  width: 18rem;
+    margin-bottom: 1.6rem;
+    width: 18rem;
 }
 
 .nome_produto {
@@ -268,13 +280,13 @@ main {
     padding: 4px;
     padding-top: 16px;
     font-weight: 600;
-    padding-bottom: 2px;   
+    padding-bottom: 2px;
 }
 
-.price{
+.price {
     color: rgb(27, 131, 9);
-    font-size: 28px; 
-    font-family:Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn_comprar {
@@ -294,10 +306,110 @@ main {
     font-weight: 800px;
     font-size: 26px;
     margin-top: -5px;
-    transition: 0.3s background; 
+    transition: 0.3s background;
 }
 
 .btn_comprar:hover {
     transition: 0.5s background;
     background-color: rgb(221, 153, 25);
+}
+
+.car_background {
+    background-image: url(../img/imgIncio2.png);
+    background-image: cover;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 200px;
+}
+
+.container-carrinho {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-nome {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.item-preco {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.item-controle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-controle input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.item-subtotal {
+    font-weight: bold;
+    color: #e65c00;
+    margin-left: auto;
+}
+
+.btn-remover {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+.carrinho-total {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 20px;
+    border-top: 2px solid #ff9900;
+    margin-top: 20px;
+}
+
+.btn-finalizar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
 }
