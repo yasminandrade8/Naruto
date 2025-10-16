@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body onload="exibirCarrinho()">
+
+    <header>
+        <div class="header_div">
+            <img class="header_img" src="../img/narutoicon.jpg" alt="Icon">
+            <p class="header_txt">Loja Naruto</p>
+        </div>
+
+        <div class="header_menu">
+            <a href="../index.html"><button class="btn_home">Home</button></a>
+            <a href="sobre.html"><button class="btn_sobre">Sobre</button></a>
+            <a href="login.html"><button class="btn_login">Login</button></a>
+            <a href="carrinho.html"><button class="btn_carrinho"><i class="fas fa-shopping-cart"></i></button></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="car_background">
+            <div class="container-carrinho">
+
+                <div id="lista-carrinho">
+                </div>
+
+                <div class="carrinho-total">
+                    Total: <span id="total-carrinho">R$ 0,00</span>
+                </div>
+
+                <button class="btn-finalizar"
+                    onclick="alert('Funcionalidade de Checkout ainda não implementada. Total: ' + document.getElementById('total-carrinho').textContent)">
+                    Finalizar Compra
+                </button>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer_div">
+            <p class="footer_txt">©Loja Naruto</p>
+        </div>
+    </footer>
+
+    <script src="../js/carrinho.js"></script>
+</body>
+
+</html>
