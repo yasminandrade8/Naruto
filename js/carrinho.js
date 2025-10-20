@@ -1,11 +1,6 @@
-// Onde o carrinho será armazenado (usa o LocalStorage para persistência)
 let carrinho = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
 
-/**
- * Função para adicionar um produto ao carrinho.
- * Chamada quando o botão 'Comprar' é clicado.
- * @param {HTMLElement} botao - O botão que foi clicado.
- */
+
 function adicionarAoCarrinho(botao) {
     // 1. Coleta os dados do produto através dos atributos 'data-' do botão
     const nome = botao.getAttribute('data-nome');
@@ -13,7 +8,6 @@ function adicionarAoCarrinho(botao) {
     const imagem = botao.getAttribute('data-img');
     const id = nome.replace(/\s/g, "") + preco; // ID simples baseado no nome e preço
 
-    // 2. Verifica se o produto já está no carrinho
     const itemExistente = carrinho.find(item => item.id === id);
 
     if (itemExistente) {
@@ -31,19 +25,15 @@ function adicionarAoCarrinho(botao) {
         carrinho.push(novoItem);
     }
 
-    // 3. Salva o carrinho atualizado no LocalStorage
+
     salvarCarrinho();
 
-    // 4. Feedback e redirecionamento
+
     alert(`"${nome}" adicionado ao carrinho!`);
 
-    // Opcional: Redirecionar para a página do carrinho após adicionar
-    // window.location.href = "public/carrinho.html";
 }
 
-/**
- * Salva o array 'carrinho' no LocalStorage.
- */
+
 function salvarCarrinho() {
     localStorage.setItem('carrinhoItens', JSON.stringify(carrinho));
     // Se a página do carrinho estiver aberta, atualiza a exibição
@@ -52,20 +42,13 @@ function salvarCarrinho() {
     }
 }
 
-/**
- * Remove um item do carrinho
- * @param {string} idProduto - O ID único do produto a ser removido.
- */
+
 function removerItem(idProduto) {
     carrinho = carrinho.filter(item => item.id !== idProduto);
     salvarCarrinho();
 }
 
-/**
- * Altera a quantidade de um item no carrinho
- * @param {string} idProduto - O ID do produto.
- * @param {number} novaQuantidade - A nova quantidade.
- */
+
 function alterarQuantidade(idProduto, novaQuantidade) {
     const quantidade = parseInt(novaQuantidade);
     if (quantidade < 1) {
@@ -80,14 +63,11 @@ function alterarQuantidade(idProduto, novaQuantidade) {
 }
 
 
-/**
- * Função principal para exibir o carrinho na página public/carrinho.html
- */
+
 function exibirCarrinho() {
     const listaCarrinho = document.getElementById('lista-carrinho');
     const totalElement = document.getElementById('total-carrinho');
 
-    // Limpa a lista atual
     listaCarrinho.innerHTML = '';
     let totalGeral = 0;
 
@@ -97,7 +77,7 @@ function exibirCarrinho() {
         return;
     }
 
-    // Cria os elementos HTML para cada item do carrinho
+
     carrinho.forEach(item => {
         const subtotal = item.preco * item.quantidade;
         totalGeral += subtotal;
@@ -123,9 +103,6 @@ function exibirCarrinho() {
         listaCarrinho.appendChild(itemDiv);
     });
 
-    // Atualiza o total geral
+    
     totalElement.textContent = `R$ ${totalGeral.toFixed(2).replace('.', ',')}`;
 }
-
-// Quando a página public/carrinho.html carregar, a função exibirCarrinho será chamada.
-// Isso será configurado na própria página carrinho.html (Passo 3)
