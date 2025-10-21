@@ -1,10 +1,6 @@
 let carrinho = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
 
-/**
- * Função para adicionar um produto ao carrinho.
- * Chamada quando o botão 'Comprar' é clicado.
- * @param {HTMLElement} botao - O botão que foi clicado.
- */
+
 function adicionarAoCarrinho(botao) {
     const nome = botao.getAttribute('data-nome');
     const preco = parseFloat(botao.getAttribute('data-preco'));
@@ -42,20 +38,13 @@ function salvarCarrinho() {
     }
 }
 
-/**
- * Remove um item do carrinho
- * @param {string} idProduto - O ID único do produto a ser removido.
- */
+
 function removerItem(idProduto) {
     carrinho = carrinho.filter(item => item.id !== idProduto);
     salvarCarrinho();
 }
 
-/**
- * Altera a quantidade de um item no carrinho
- * @param {string} idProduto - O ID do produto.
- * @param {number} novaQuantidade - A nova quantidade.
- */
+
 function alterarQuantidade(idProduto, novaQuantidade) {
     const quantidade = parseInt(novaQuantidade);
     if (quantidade < 1) {
@@ -150,4 +139,5 @@ const pagamentoRadios = document.querySelectorAll('input[name="pagamento"]');
             localStorage.removeItem("carrinho");
             window.location.href = "../index.html";
         });
+
 
