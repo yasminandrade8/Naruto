@@ -1,7 +1,11 @@
 let carrinho = JSON.parse(localStorage.getItem('carrinhoItens')) || [];
 
+/**
+ * Função para adicionar um produto ao carrinho.
+ * Chamada quando o botão 'Comprar' é clicado.
+ * @param {HTMLElement} botao - O botão que foi clicado.
+ */
 function adicionarAoCarrinho(botao) {
-
     const nome = botao.getAttribute('data-nome');
     const preco = parseFloat(botao.getAttribute('data-preco'));
     const imagem = botao.getAttribute('data-img');
@@ -22,24 +26,36 @@ function adicionarAoCarrinho(botao) {
         carrinho.push(novoItem);
     }
 
+
     salvarCarrinho();
 
     alert(`"${nome}" adicionado ao carrinho!`);
 
 }
 
+
 function salvarCarrinho() {
     localStorage.setItem('carrinhoItens', JSON.stringify(carrinho));
+    // Se a página do carrinho estiver aberta, atualiza a exibição
     if (document.getElementById('lista-carrinho')) {
         exibirCarrinho();
     }
 }
 
+/**
+ * Remove um item do carrinho
+ * @param {string} idProduto - O ID único do produto a ser removido.
+ */
 function removerItem(idProduto) {
     carrinho = carrinho.filter(item => item.id !== idProduto);
     salvarCarrinho();
 }
 
+/**
+ * Altera a quantidade de um item no carrinho
+ * @param {string} idProduto - O ID do produto.
+ * @param {number} novaQuantidade - A nova quantidade.
+ */
 function alterarQuantidade(idProduto, novaQuantidade) {
     const quantidade = parseInt(novaQuantidade);
     if (quantidade < 1) {
@@ -53,10 +69,13 @@ function alterarQuantidade(idProduto, novaQuantidade) {
     }
 }
 
- exibirCarrinho() {
+
+
+function exibirCarrinho() {
     const listaCarrinho = document.getElementById('lista-carrinho');
     const totalElement = document.getElementById('total-carrinho');
 
+   
     listaCarrinho.innerHTML = '';
     let totalGeral = 0;
 
@@ -91,45 +110,44 @@ function alterarQuantidade(idProduto, novaQuantidade) {
         listaCarrinho.appendChild(itemDiv);
     });
 
-    // Atualiza o total geral
+    
     totalElement.textContent = `R$ ${totalGeral.toFixed(2).replace('.', ',')}`;
 }
 
 const pagamentoRadios = document.querySelectorAll('input[name="pagamento"]');
-const detalhesCartao = document.getElementById("cartao-detalhes");
+        const detalhesCartao = document.getElementById("cartao-detalhes");
 
-pagamentoRadios.forEach(radio => {
-    radio.addEventListener("change", () => {
-        if (radio.value === "cartao") {
-            detalhesCartao.style.display = "block";
-        } else {
-            detalhesCartao.style.display = "none";
-        }
-    });
-});
+        pagamentoRadios.forEach(radio => {
+            radio.addEventListener("change", () => {
+                if (radio.value === "cartao") {
+                    detalhesCartao.style.display = "block";
+                } else {
+                    detalhesCartao.style.display = "none";
+                }
+            });
+        });
 
-document.getElementById("finalizar").addEventListener("click", () => {
-    const metodo = document.querySelector('input[name="pagamento"]:checked');
-    if (!metodo) {
-        alert("Selecione uma forma de pagamento!");
-        return;
-    }
+        document.getElementById("finalizar").addEventListener("click", () => {
+            const metodo = document.querySelector('input[name="pagamento"]:checked');
+            if (!metodo) {
+                alert("Selecione uma forma de pagamento!");
+                return;
+            }
 
-    if (metodo.value === "cartao") {
-        const numero = document.getElementById("num-cartao").value;
-        const nome = document.getElementById("nome-cartao").value;
-        const validade = document.getElementById("validade").value;
-        const cvv = document.getElementById("cvv").value;
+            if (metodo.value === "cartao") {
+                const numero = document.getElementById("num-cartao").value;
+                const nome = document.getElementById("nome-cartao").value;
+                const validade = document.getElementById("validade").value;
+                const cvv = document.getElementById("cvv").value;
 
-        if (!numero || !nome || !validade || !cvv) {
-            alert("Preencha todos os dados do cartão!");
-            return;
-        }
-    }
+                if (!numero || !nome || !validade || !cvv) {
+                    alert("Preencha todos os dados do cartão!");
+                    return;
+                }
+            }
 
-    alert("Compra finalizada com sucesso via " + metodo.value.toUpperCase() + "!");
-    localStorage.removeItem("carrinho");
-    window.location.href = "../index.html";
-});
+            alert("Compra finalizada com sucesso via " + metodo.value.toUpperCase() + "!");
+            localStorage.removeItem("carrinho");
+            window.location.href = "../index.html";
+        });
 
-// Isso será configurado na própria página carrinho.html (Passo 3)
